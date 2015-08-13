@@ -1,3 +1,7 @@
+<?php
+require_once("display_object_functions.php");
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -117,88 +121,35 @@ header, section, footer, aside, article, figure {
 
 <div class="container">
   <header>
-    <a href="#"><img src="../images/Icon For Xenonscript Full.png" alt="Insert Logo Here" width="210" height="105" id="Insert_logo" style="background-color: #C6D580; display:block;" /></a>
+    <a href="#"><img src="images/Icon For Xenonscript Full.png" alt="Insert Logo Here" width="210" height="105" id="Insert_logo" style="background-color: #C6D580; display:block;" /></a>
   </header>
+  <?php createList();?>
+  <!--
   <div class="sidebar1">
-    <p>API Reference </p>
-    <p>&nbsp;</p>
-    <p>Still in Progress</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-  </div>
+  <nav>
+    <ul>
+      <li><a href="#">Link one</a></li>
+      <li><a href="#">Link two</a></li>
+      <li><a href="#">Link three</a></li>
+      <li><a href="#">Link four</a></li>
+    </ul>
+    </nav>
+    </div>
+  <!-- end .sidebar1 -->
   <article class="content">
-    <h1>Xenonscript™ - Support</h1>
-    <section> </section>
+    <h1>Download</h1>
     <section>
-      <h2>The basics (For advanced programmers)</h2>
-      <p>The basic necessary components are classes. At the beginning of the execution, ‘start’ method in class ‘Start’ will be execute, i.e., the entry point of the program.</p>
-      <h3>Uniqueness of methods and properties.</h3><p>
-        Every class consists of two parts, properties and methods. <br>
-        1. All properties are private by their nature, getters and setters can be created to access these properties in a public context. <br>
-        2. All methods are public, you can call all of the methods of an Class publicly. To compensate this, we’ve expand the power of functions;</p>
-     <h3> Uniqueness of functions:</h3>
-       <p> A function or a method has the following basic components:<br>
-        1. Parameters<br>
-        2. Local Variables<br>
-        3. Local Functions<br>
-        4. Method Calls</p>
-      <h4>About Local Variables:</h4><p>
-        You can no longer declare local variable in single function body like the following:</p>
-      <p> int somevar = 1;<br>
-        var somevar = 1;<br>
-        let somevar = 1;</p>
-      <p>Instead, you edit the local variable list in the function’s editor, the program executer will declare all variable available for you.</p>
-      <p> Declare somevar in local functions;<br>
-        call somevar.assign(somevalue) in the beginning of function body. </p>
-      <h4>About parameter typing</h4>
-      <p>As in objective-C, types can only apply to compile time. In the runtime, all variables and instances are dynamically typed. This is also true in Xenonscript. Types are dynamically typed so you do need to care about it, but it is a good practice to do “good typing” as the grammar checker will be updated in future versions.<br>
-        <br>
-      <h4> About Local Functions</h4>
-        It is a new concept in Xenonscript. It allows you to declare functions inside functions, as currently all logics are declared as method calls of a call to function. Consider the following ways in Xenonscript.</p>
-      <p>I.</p>
-      <p>function testControlFlow(boolean booleanValueToJudge) {<br>
-        if(booleanValueToJudge, caseTrue, caseFalse);<br>
-         	//definition For if: if(bool value, function true, function false);<br>
-        }</p>
-      <p>function caseTrue() {<br>
-        //do something if true<br>
-        }</p>
-      <p>function caseFalse(){<br>
-        //do something if false<br>
-        }</p>
-      <p>II.</p>
-      <p>function testControlFlow(boolean booleanValueToJudge) {<br>
-        if(booleanValueToJudge, caseTrue, caseFalse);<br>
-         //definition For if: if(bool value, function true, function false);<br>
-        function caseTrue() {<br>
-        //do something if true<br>
-        }</p>
-      <p> function caseFalse(){<br>
-        //do something if false<br>
-        }<br>
-        }<br>
-      </p>
-      <p>Both ways are acceptable although this way is under evaluation and may change in the future updates.</p>
-      <h4>About method calls</h4>
-      <p>The method body is basically a list of calls to other methods. Every things is in the form of a method call. For example, if you want to return something, you can just write:<br>
-        <br>
-        this.return(“a string”);<br>
-        this.return(result);</p>
-      <p>The dot notation here is for illustration purposes and the syntax may change with future version updates.</p>
-      <h2>&nbsp;</h2>
+     <h2>Stable Release</h2>
+      <p>Download on the App Store</p>
+    </section>
+    <section>
+      <h2>Source Code</h2>
+      <p>Jump to GitHub</p>
     </section>
     <!-- end .content --></article>
   <footer>
-    <p>
-      <aside></aside>
-    </p>
-    <p>If your have any further questions or suggestions, please feel free to contact us at support@xenonscript.com</p>
+    <p>&nbsp;</p>
   </footer>
-  <!-- end .sidebar1 -->
-  <footer> </footer>
   <!-- end .container --></div>
 </body>
 </html>
