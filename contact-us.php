@@ -4,10 +4,7 @@
 	if($_POST['textarea']){
     	$isSubmit = true;
     } 
-	$host = 'localhost';
-	$dbname = 'a0714112558';
-	$username = 'a0714112558';
-	$password = '47987468';
+	
 	
 	try{
 		$connec = new PDO("mysql:host={$host};dbname={$dbname}", $username, $password);
